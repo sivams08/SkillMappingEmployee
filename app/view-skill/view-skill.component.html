@@ -1,0 +1,26 @@
+<div *ngIf="skillmdlArr">
+    <table>
+        <thead>
+            <tr>
+              <th>Employee Id</th>
+              <th>Employee Name</th>             
+              <th>Experiance</th>
+              <th>Batch count</th>
+              <th>PlacementCount</th>
+              <th>Certification</th>
+              <th>Skill</th>                            
+            </tr>
+          </thead>
+            <tbody>
+                <tr *ngFor="let skillMdl of skillmdlArr">                    
+                    <td>{{skillMdl.empMaster.employee_Id}}</td>
+                    <td>{{skillMdl.empMaster.emplyeeName}}</td>                    
+                    <td>{{skillMdl.empMaster.experiance}}</td>
+                    <td>{{skillMdl.empMaster.batchCount}}</td>
+                    <td>{{skillMdl.empMaster.placementCount}}</td>
+                    <td>{{skillMdl.certificate}}</td>
+                    <td>{{skillMdl.skill}}</td>                                                          
+              </tr>
+              </tbody>
+              </table>        
+  </div>

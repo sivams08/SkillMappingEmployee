@@ -1,0 +1,38 @@
+
+    <div>
+        <h2>Skill Update</h2>
+      <form>        
+          <table>
+              <thead>
+                  <tr>
+                     <th>Employee Id</th>    
+                    <th>Emplyee Name</th>
+                    <th>Email Id</th>
+                    <th>Mobile Number</th>
+                    <th>Designation</th>                  
+                    <th>Qualification</th> 
+                    <th>Experience</th>                     
+                    <th>Placement count</th> 
+                    <th>Batch handled</th>                     
+                  </tr>
+                </thead>
+                  <tbody>
+                      <tr *ngFor="let employee of employeemodel">
+                          <td>{{employee.employee_Id}}</td>
+                          <td>{{employee.emplyeeName}}</td>
+                          <td>{{employee.email_Id}}</td>
+                          <td>{{employee.mobileNumber}}</td>
+                          <td>{{employee.designation}}</td>                          
+                          <td>{{employee.qualification}}</td>
+                          <td>{{employee.experiance}}</td>
+                          <td>{{employee.placementCount}}</td>
+                          <td>{{employee.batchCount}}</td>
+                          <td><button  (click)="skillUpdate(employee)"> Update </button></td>                                                
+                    </tr>
+                    </tbody>
+                    </table>
+    </form>
+      </div>
+      <div>
+          <app-skill-update [employee]="employeemod"></app-skill-update>
+      </div>
